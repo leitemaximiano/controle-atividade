@@ -1,7 +1,8 @@
-import { TaskTypes } from '../user-cases/create-task/create-task-dto';
+import { Task } from "../entities/task";
+
 
 interface CreateTaskInterface {
-    save(task: TaskTypes) : Promise<void>
+    save(task: Task) : Promise<void>
 }
 
 export { CreateTaskInterface };

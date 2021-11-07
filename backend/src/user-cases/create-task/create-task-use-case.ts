@@ -1,5 +1,6 @@
 import { TaskTypes } from './create-task-dto';
 import { MemoryRepository } from '../../repository/impremetation/MemoryRespository';
+import { Task } from '../../entities/task';
 
 
 class CreateTaskUseCase {
@@ -8,7 +9,7 @@ class CreateTaskUseCase {
     ) {}
 
     async execute(data: TaskTypes) {
-        await this.repository.save(data);
+        await this.repository.save(new Task(data));
     }
 }
 

@@ -8,4 +8,4 @@ const createTaskUseCase = new CreateTaskUseCase(memoryRespository);
 
 const createTaskController = new CreateTaskController(createTaskUseCase);
 
-export { createTaskController, createTaskUseCase };
+export { createTaskController, createTaskUseCase, memoryRespository };
